@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Angular CIS213" content="">
+    <meta name="Jonathan Hofler" content="">
+    <title>Game Site</title>
+
+    <!-- Boostrap CSS -->
+    <link rel="stylesheet"href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <!-- customeized css to overide boostrap -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/IndexFooter.css">
+    
+</head>
+
+<body ng-app="gameSite" ng-controller="gameController"> <!-- initializes AngularJS the framework automatically-->
+
+  <div id="vidtop-content"><!-- video content div begin-->
+
+    <!-- <div ng-include src="'views/main-page/navbar.html'"></div> -->
+    <div main-page-navbar></div>
+
+    <div class="video-background">
+        <div class="video-foreground">
+            <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ? controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!--  main page content-->
+    <!-- <div ng-include src="'views/main-page/main-content.html'"></div> -->    
+    <div main-page-content></div>
+
+    <!--  main page game preview-->
+    <!-- <div ng-include src="'views/main-page/index-games.html'"></div> -->    
+    <div main-page-games></div>
+
+    <div main-page-footer></div>
+
+    
+    </div> <!--  end of video content div-->
+
+
+    <!-- Angular Files -->
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- if you enable the other files will get console message tried to load angular more than once -->
+    <!-- Additional Boostrap Files -->
+     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+    <!-- Controllers -->
+    <script src="js/directives/main-content.js"></script>
+
+    
+
+
+  </body>
+</html>

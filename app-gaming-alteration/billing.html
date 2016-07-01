@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIS213</title>
+    <!-- Boostrap CSS -->
+    <link rel="stylesheet"href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <!-- customeized css to overide boostrap -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+<!--     <link rel="stylesheet" type="text/css" href="css/Pretty-Search-Form.css">
+ -->    <link rel="stylesheet" type="text/css" href="css/GameFooter.css">
+    <link rel="stylesheet" type="text/css" href="css/share.css">
+
+    
+    
+<!--script for Form validation-->
+<script type="text/javascript">
+/*<CDATA[[*/
+function validateForm( )
+{
+
+if (document.forms[0].fname.value == "" )
+  
+    {
+        alert ( "Please enter First Name" );
+        document.forms[0].fname.focus();
+        return false;
+    }
+    
+if (document.forms[0].lname.value == "" )
+  
+    {
+        alert ( "Please enter Last Name" );
+        document.forms[0].lname.focus();
+        return false;
+    }
+
+    if (document.forms[0].address.value == "" )
+  
+    {
+        alert ( "Please enter Address" );
+        document.forms[0].address.focus();
+        return false;
+    }       
+
+     if (document.forms[0].phone.value == "" )
+  
+    {
+        alert ( "Please enter Phone Number" );
+        document.forms[0].phone.focus();
+        return false;
+    }       
+
+     if (document.forms[0].ccard.value == "" )
+  
+    {
+        alert ( "Please enter credit card Number" );
+        document.forms[0].ccard.focus();
+        return false;
+    }       
+
+    if ( document.forms[0].rental.selectedIndex == 0 )
+    {
+        alert ( "Please select rental duration." );
+        return false;
+    }
+
+return true; 
+}
+/*]]>*/
+</script>
+
+</head>
+
+<body ng-app="gameSite">
+
+    <!-- <div ng-include src="'views/main-page/navbar.html'"></div> -->
+    <div main-page-navbar></div>
+
+
+    <div reg-Content></div>
+
+
+    <div main-page-footer></div>
+
+    <!-- Angular Files -->
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- if you enable the other Angular files will get console message tried to load angular more than once -->
+    <!-- Additional Boostrap Files -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+    <!-- Controllers -->
+    <script src="js/directives/main-content.js"></script>
+    
+</body>
+
+</html>

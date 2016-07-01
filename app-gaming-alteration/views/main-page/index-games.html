@@ -1,0 +1,13 @@
+<div class="container panel">
+  <div class="row">
+        <div ng-repeat="games in games" class="col-md-2"> <!-- angular element-->
+            <div class="thumbnail"> 
+              <img ng-src="{{ games.cover }}"/> <!-- angular element-->
+              <!--  <div class="rating">
+             <p class="likes" ng-click="plusOne($index)">+ {{ games.likes }} </p>
+              <span class="likes_span"></span>
+              <p class="dislikes" ng-click="minusOne($index)">- {{ games.dislikes }} </p> -->
+          </div>
+        </div>
+      </div>
+    </div>

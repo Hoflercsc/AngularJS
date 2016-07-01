@@ -1,0 +1,178 @@
+/* Video background */
+
+.video-background {
+    background: #000;
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+/* index.html background video */
+
+    z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+}
+#vidtop-content {
+    top: 0;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+    .video-foreground { width: 300%; left: -100%; }
+}
+
+
+/* index.html mainpage content  */
+
+h1{
+
+ color: white; 
+ margin-top: 75px;
+ margin-left:35px;  
+}
+h2{
+
+ color: white; 
+ margin-top: 25px;
+ margin-left:35px; 
+ font-size: 35px; 
+}
+
+ul.main-list{
+  font-size:22px;
+  line-height:40px;
+  color: white;
+  margin-left:40px;
+}
+
+/* index.html mainpage button */
+
+.btn{
+margin-left:35px;
+text-align: center;
+font-size: 22px;
+font-weight: 500;
+/*letter-spacing:1px;*/
+color: white;
+width:auto;
+background-color: #33cc33;
+border: none;
+
+}
+.btn:hover, .btn-success:active, .btn-success:focus{
+background-color: #33cc33 !important;
+color: white !important;
+border-color: transparent !important;
+}
+
+/*button glyphicon*/
+.glyphicon{
+
+    margin-left: 25px;
+
+}
+
+.thumbnail {
+ border: 0px;
+ position: relative;
+ padding: 10px;
+ border-radius: 0;
+ margin-bottom:5px;
+ background-color : transparent;
+}
+
+.thumbnail img {
+ margin-top: 10px;
+ margin-bottom: 1px;
+ max-width: 100%;
+ opacity: 0.7;
+}
+
+.panel{
+  background: transparent;
+  margin-left: auto;
+  margin-top: 100px;
+}
+
+/*.col-md-3{
+    padding: 2px;
+}
+*/
+.rating {
+ text-align: right;
+ -webkit-user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+/* margin: 30px 0 -30px 20px;
+*/}
+
+.likes,
+.dislikes {
+   background: #F65A5B ;
+ color: #fff;
+ cursor: pointer;
+ display: inline-block;
+ font-size: 15px;
+   line-height: 40px;
+   min-width: 40px;
+   height: 40px;
+   border-radius: 50%;
+ /*margin: 0 -30px 0 40px;*/
+   text-align: center;
+   font-weight: 200;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+   transition: background 500ms;
+}
+
+/*.likes_span{
+margin-left: 100px;
+}*/
+
+.likes:hover,
+.dislikes:hover {
+ color: #F65A5B ;
+   background: rgba(246, 90, 91, 0.25);
+   transition: background 500ms;
+}
+
+
+/* index.html game showcase page */
+
+.thumbnail-game {
+ border: 0px;
+ position: relative;
+ padding: 5px;
+ border-radius: 0;
+ margin-bottom:1px;
+}
+
+.thumbnail-game img {
+ margin-top: 10px;
+ margin-bottom: 1px;
+ max-width: 100%;
+}
+.col-md-2{
+    padding: 2px;
+}
+
+.gamebuttons{
+  margin-left: 5px;
+  display:inline;
+ /* width:10px;
+  height:10px;*/
+  letter-spacing:5px;
+  font-size:16px;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+/* index.html form css */
+
+.form{
+margin-top: 20px;
+
+}

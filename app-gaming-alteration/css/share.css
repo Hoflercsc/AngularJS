@@ -1,0 +1,24 @@
+body{background-color: white;
+     color: black;
+   }
+     
+   
+td{ 
+    font-family: tahoma, verdana, sans-serif;
+    font-size: 10pt;
+  }
+  
+td.head{ 
+
+   font-family: times new roman, serif;
+   font-size: 14pt;
+     }
+
+
+td{ 
+    padding: 7px;
+  }
+.form{
+
+  color: black;
+}
