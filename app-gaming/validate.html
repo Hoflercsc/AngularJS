@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Form Example</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<!--script for Form Validation-->
+<script type="text/javascript">
+function validateForm( )
+{
+
+if (document.forms[0].fname.value == "" )
+  
+    {
+        document.forms[0].fname_validate.value = "Please enter your First Name";
+		document.forms[0].fname.focus();
+        return false;
+    }
+	
+if (document.forms[0].lname.value == "" )
+  
+    {
+        document.forms[0].lname_validate.value = "Please enter your Last Name";
+		document.forms[0].lname.focus();
+        return false;
+    }	
+	
+return true; 
+}
+
+function setValue( )
+{
+
+if (document.forms[0].fname_validate.value == "Please enter your First Name" )
+  
+    {
+        document.forms[0].fname_validate.value = "";
+		document.forms[0].fname.focus();
+        return false;
+    }	
+	
+if (document.forms[0].lname_validate.value == "Please enter your Last Name" )
+  
+    {
+        document.forms[0].lname_validate.value = "";
+		document.forms[0].lname.focus();
+        return false;
+    }	
+
+return true; 
+}
+</script>
+
+</head>
+<body>
+<h1><em>Form Validation Example</em></h1>
+<form action="thanks.htm" name="contact" method="post" onsubmit="return validateForm( );">
+
+  <table>
+  <tr><td class="head" colspan="3"><strong><em>Input boxes</em> </strong></td></tr>
+	<tr>
+	<td>First Name</td>
+	<td><input type="text" size="25" value="" name="fname" onchange="setValue()" /></td><td><input type="text" name="fname_validate" size="30" style="color: #fff; border-style: none; border-color: inherit; border-width: medium; background-color: Transparent" text="0" /></td>
+    </tr>
+	</tr>
+	<td>Last Name</td>
+	<td><input type="text" size="25" value="" name="lname" onchange="setValue()" /></td><td> <input type="text" name="lname_validate" size="30" style="color: #fff; border-style: none; border-color: inherit; border-width: medium; background-color: Transparent" text="0" /></td>
+	</tr>
+    <tr>
+	<td colspan="3"><input type="submit" value="Submit Form" /><input type="reset" value="Reset" /></td>
+	</tr>
+  </table>
+</form>
+</body>
+</html>

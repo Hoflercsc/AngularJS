@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Angular CIS213" content="">
+    <meta name="Jonathan Hofler" content="">
+    <title>Game Site</title>
+
+    <!-- Boostrap CSS -->
+    <link rel="stylesheet"href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <!-- customeized css to overide boostrap -->
+    <link rel="stylesheet" type="text/css" href="css/stylesOne.css">
+    <link rel="stylesheet" type="text/css" href="css/Pretty-Footer.css">
+</head>
+
+<body ng-app="gameSite" ng-controller="gameController"> <!-- initializes AngularJS the framework automatically-->
+
+  <div id="vidtop-content"><!-- video content div begin-->
+
+   <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand navbar-link" href="index.html"> <img src="img/gameflylogo.JPG"  class="main-logo"></a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav">
+                    <li role="presentation"><a href="games.html"><strong>Games</strong> </a></li>
+                    <li role="presentation"><a href="billing.html"><strong>Registration &amp; Biling</strong></a></li>
+                </ul>
+           <!--      <form class="navbar-form navbar-right search-form">
+                    <div class="input-group">
+                        <div class="input-group-addon"><span><i class="glyphicon glyphicon-search"></i></span></div>
+                        <input class="form-control" type="text" placeholder="I am looking for.." size="60">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="button">Search </button>
+                        </div>
+                    </div>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+
+    <div class="video-background">
+    <div class="video-foreground">
+        <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?
+controls=0&showinfo=0&rel=0&autoplay=1&loop=1
+&playlist=W0LHTWG-UmQ" allowfullscreen></iframe>
+    </div>
+</div>
+
+  
+
+<div class="mainpage-content">
+  <div class="container">
+    <h1> {{ titleOne }} </h1>
+    <h2> {{ titleTwo }} </h2>
+
+    <ul class="main-list">
+      <li>As little as 54 cents a day </li>
+      <li>FREE Shipping</li>
+      <li>Cancel Anytime</li>
+    </ul>
+    <button class="btn btn-default btn-lg main" type="button" ng-click="doMessage(message)"> 
+    START FREE TRIAL<i class="glyphicon glyphicon-arrow-right main"></i></button> 
+    </div>
+</div>
+
+       <div class="container panel">
+        <div ng-repeat="games in games" class="col-md-2"> <!-- angular element-->
+            <div class="thumbnail"> 
+              <img ng-src="{{ games.cover }}"/> <!-- angular element-->
+              <div class="rating">
+              <p class="likes" ng-click="plusOne($index)">+ {{ games.likes }} </p><!-- angular element-->
+              <!-- <span class="likes_span"></span> -->
+              <p class="dislikes" ng-click="minusOne($index)">- {{ games.dislikes }} </p><!-- angular element-->
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+</div> <!--  end of video content div-->
+
+
+    <footer>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 footer-navigation">
+               <h3><a href="index.html"> <img src="img/gameflylogo.JPG"></a></h3>
+                <p class="links"><a href="index.html">Home</a><strong> · </strong><a href="games.html">Games </a><strong> · </strong><a href="billing.html">Registration &amp; Billing</a><strong> </strong></p>
+                <p class="company-name">PlayHard© 2016 </p>
+            </div>
+            <div class="col-md-4 col-sm-6 footer-contacts">
+                <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+                    <p><span class="new-line-span">150 Grandby Street</span>Norfolk, Va 23513</p>
+                </div>
+                <div><i class="fa fa-phone footer-contacts-icon"></i>
+                    <p class="footer-center-info email text-left">757-646-6757 </p>
+                </div>
+                <div><i class="fa fa-envelope footer-contacts-icon"></i>
+                    <p> <a href="#" target="_blank">support@playahard.com</a></p>
+                </div>
+            </div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-md-4 footer-about">
+                <h4>About PLAY HARD </h4>
+                <p> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+                </p>
+                <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-github"></i></a></div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Angular Files -->
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- if you enable the other files will get console message tried to load angular more than once -->
+    <!-- Additional Boostrap Files -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+
+  </body>
+</html>
