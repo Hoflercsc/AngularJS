@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Blue Whale" content="">
+    <title>BigBlue</title>
+	<!-- Boostrap CSS -->
+    <link rel="stylesheet"href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/map.css">
+    <link rel="stylesheet" href="assets/css/styles.css"> 
+    <!-- Google maps API Key -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo9FHKeYql_8idHraBEvQf5lh8uJLz9RI&callback=initMap"
+  type="text/javascript"></script>
+
+  
+</head>
+
+<body ng-app="bigBlue"> <!--angular directive-->
+
+        <!-- <div main-page-navbar></div>--> <!--no need for this with ng-route-->
+        
+  <div ng-controller="MapController">
+    <div id="map"></div>
+    <div id="repeat" ng-repeat="marker in markers | orderBy : 'title'">
+        <!--  <a id="country_container" href="#" ng-click="openInfoWindow($event, marker)">
+         <label id="names" >{{marker.title}}</label></a> -->
+    </div>
+</div> 
+
+    <!-- Additional Java Script Files -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Module/Controller -->
+     <script src="js/app.js"></script>
+    <!-- directives -->
+    <script src="js/directives/main-content.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!--
+Author: Jonathan Hofler
+Project: Big Blue Revision
+This site is a revision of the original Big Blue angular project
+
+Whats new: 
+(1) using ng-route (single page application)
+(2) using 2 controllers one for app data and one for map data
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigBlue</title>
+    <!-- boostrap &  google fonts css-->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">    
+    <!-- background slide show css-->
+    <link rel="stylesheet" href="assets/css/style1.css">
+     <!-- custom css-->
+    <link rel="stylesheet" href="assets/css/styles.css"> 
+</head>
+
+<body ng-app="bigBlue"> <!--angular directive-->
+    
+
+    <div main-page-navbar></div> <!--angular navbar directive-->
+
+    <!--<div main-slide-show> </div> -->  <!--moved into ng-route in app.js file-->
+
+    <div ng-view ></div>
+    
+
+
+  
+    <!-- Additional Java Script Files -->
+    <!-- jquery.min.js is needed on every page -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- if bootstrap.min.js file is loaded on each page nav bar will not collapse -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Angular Files -->
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- Angular-route.js only needed on one page with ng-route -->
+    <script src="bower_components/angular/angular-route/angular-route.js"></script>
+    <!-- Angualr must run first then ui.boostrap -->
+    <!-- not needed but good to have -->
+    <script src="bower_components/bootstrap/dist/js/ui-bootstrap-tpls-2.0.2.js"></script>
+    <!-- Module/directives -->
+    <script src="js/app.js"></script>
+    <script src="js/directives/main-content.js"></script>
+
+
+</body>
+
+</html>
