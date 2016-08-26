@@ -1,5 +1,6 @@
 # AngularJS
 AngularJS 1.5 Project Info:
+
 Hi my name is Jonathan Hofler below are descriptions of my 5 Angular projects.
 
 (App-gaming and App-gaming-alteration)
