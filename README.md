@@ -14,6 +14,6 @@ http://stackoverflow.com/questions/8449716/cross-origin-requests-are-only-suppor
 
 (Bigblue & Bigblue-Rev)
 
-Bigblue & Bigblue-Rev are my attempts to create a simple educational site that talks about the Blue Whale. Both sites have the full screen background slide show utilizing angular directives, controllers, templates, google maps api, and $http.get request which populates the google map markers from a json document or api call such as http://hotline.whalemuseum.orgGET/api.json?species=orca&near=48.5159,-123.1524&radius=0.5&limit=1000. Also on the overview page there are fields where you can guess the answer to questions. Both of these apps use Bootstrap 3.35.
+Bigblue & Bigblue-Rev are my attempts to create a simple educational site that talks about the Blue Whale. Both sites have the full screen background slide show utilizing angular directives, controllers, templates, google maps api, and $http.get request which populates the google map markers from a json document or api call such as http://hotline.whalemuseum.org/api.json?species=orca&near=48.5159,-123.1524&radius=0.5&limit=1000. Also on the overview page there are fields where you can guess the answer to questions. Both of these apps use Bootstrap 3.35.
 
 The only difference between these the Bigblue and Bigblue-Rev is that Bligblue-Rev uses routes or $routeProvider to navigate from one page to another making the site a SPA or single page application.
