@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Blue Whale" content="">
+    <title>BigBlue</title>
+	<!-- Boostrap CSS -->
+    <link rel="stylesheet"href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/map.css">
+    <link rel="stylesheet" href="assets/css/styles.css"> 
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
+
+  
+</head>
+
+<body ng-app="mapApp"> <!--angular directive-->
+
+        <div main-page-navbar></div>  <!--angular directive-->
+        
+  <div ng-controller="MapController">
+    <div id="map"></div>
+    <div id="repeat" ng-repeat="marker in markers | orderBy : 'title'">
+        <!--  <a id="country_container" href="#" ng-click="openInfoWindow($event, marker)">
+         <label id="names" >{{marker.title}}</label></a> -->
+    </div>
+</div>
+
+              
+   <!-- Angular Files -->
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- Additional Boostrap Files -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Module/Controller -->
+    <script src="js/map.js"></script>
+    <!-- directives -->
+    <script src="js/directives/map-content.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+
+h1.omain{  /* omain = overview main*/
+  margin-bottom:40px;
+  text-align: center;
+  font-weight: bold;
+}
+h1.od{
+  margin-top:auto;
+  text-align: left;
+}
+
+h1.ofb{
+  margin-top:auto;
+  text-align: left;
+}
+
+h1.olh{
+  margin-top:auto;
+  text-align: left;
+}
+
+p.info{
+  text-align: left;
+  color: black;
+
+}
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:5px !important; padding-bottom:0 !important;
+    height: 30px;
+}
+.navbar {min-height:30px !important;}
+
+
+div.row.ofb{
+  margin-top:auto;
+}
+div.row.olh{
+  margin-top:auto;
+}
+
+
+
+div.container.main{
+  margin-top:10px;
+}
+
+img.img-responsive{
+  margin-top:auto;
+}
+
+nav.navbar.navbar-default.custom-header{
+  margin-bottom:auto;
+}
+
+.form-control{
+
+  width: 140px;
+}
